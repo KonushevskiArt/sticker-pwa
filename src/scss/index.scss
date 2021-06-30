@@ -1,0 +1,124 @@
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.board {
+	padding-top: 20px;
+	position: relative;
+	width: 100%;
+	height: 100vh;
+  background-color: #9b6767;
+	// background-image: url('../bg/bg.jpg');
+	background-repeat: repeat;
+	font-size: 24px;
+	overflow: hidden;
+}
+.title {
+	position: absolute;
+	top: 20px;
+	z-index: 1;
+	width: 500px;
+	font-size: 24px;
+	color: darksalmon;
+	text-align: center;
+	left: calc(50% - 250px);
+	animation-duration: .3s;
+}
+.sticker {
+	position: absolute;
+	display: inline-block;
+	padding: 10px 10px 3px 10px;
+	background-color: #FABA4B;
+	box-shadow: 8px 11px 20px 8px rgba(0,0,0,0.61);
+	transition: transform .3s;
+	border-radius: 5px;
+	animation-duration: .3s;
+}
+.sticker.important {
+	border: 4px solid darkorange;
+	.sticker-area {
+		font-weight: bold;
+	}
+}
+.sticker.favorite {
+	background-color: #e96cb9;
+	.sticker-area {
+		font-style: italic;
+	}
+}
+.sticker-area {
+	font-size: 18px;
+	padding: 5px;
+	color: rgb(38, 45, 56);
+	background: transparent;
+	border: none;
+	resize: none;
+}
+.sticker-options {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+	border-bottom: 1px solid black;
+}
+.sticker-options-leftwrap {
+	display: flex;
+}
+.heart {
+	color: rgb(55, 63, 77);
+	cursor: pointer;
+	margin-right: 7px;
+}
+.heart.active {
+	color: rgba(253, 26, 75, 0.897);
+}
+.star {
+	color: rgb(55, 63, 77);
+	cursor: pointer;
+}
+.star.active {
+	color: rgb(226, 150, 9);
+}
+.pin {
+	margin-right: 20px;
+	color: rgb(216, 50, 50);
+	height: 25px;
+	display: inline-block;
+	&:hover {
+		cursor: grab;
+	}
+}
+.close {
+	display: inline-block;
+	color: rgb(55, 63, 77);
+	cursor: pointer;
+	svg {
+		height: 25px;
+	}
+	&:hover {
+		color: rgb(39, 100, 207);
+	}
+}
+.wrapper-date {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: rgb(38, 45, 56);
+}
+.time {
+	font-size: 16px;
+	text-align: center;
+}
+.date {
+	font-size: 18px;
+}
